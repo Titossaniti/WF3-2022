@@ -20,27 +20,52 @@
         <!-- 2.2 Les titres-->
 
             <!-- Servent à se repérer surtout lorsque la page va se développer : <hx> 
-                Cela donne un signe d'importance, pour le référencmeent et les aides à la lecture, ne pas utiliser pour la taille
-                Il y a un seul H1 et est super important et doit respecter l'arborescence. Il y a 6 niveaux -->
+            Cela donne un signe d'importance, pour le référencmeent et les aides à la lecture, ne pas utiliser pour la taille
+            Il y a un seul H1 et est super important et doit respecter l'arborescence. Il y a 6 niveaux -->
 
         <!-- 2.3 La mise en valeur du texte-->
+            
             <!-- La balise <strong></strong> définie l'importance pour les moteurs de recherche notamment. La balise <b> permet elle de mettre en gras uniquement 
             La balise <mark> permet de surligner, il s'agit d'esthétique -->
 
         <!-- 2.4 Les listes -->
+            
             <!--Il y a la balise <ul> et <ol> pour les listes ordonnées, càd avec une hierarchie, chaque point de la liste est avec <li></li> -->
 
     <!-- 3. Les liens hypertextes-->
+            
             <!-- <a href="lien"> LIEN </a> avec l'attribut target="_blank" (dans la balise) pour ouvrir la page dans un autre onglet-->
             <!-- Ajouter l'attribut title="titre" pour avoir une infobulle sur un lien -->
             <!-- Pour envoyer un mail, <a href="mailto:adresse@mail.com"> lien </a>. -->
             <!-- Pour les liens de téléchargement, juste mettre le a href=lien du dl dans les fichier -->
 
+    <!-- 4. Les images -->
+
+        <!-- Formats -->    
+            <!-- Photo                      -> JPEG
+            Graphique avec peu de couleur   -> png 8bits
+            " " " " " "  bcp de couleur     -> png 24bits
+            Image animée                    -> GIF
+        
+            NE JAMAIS UTILISER bmp (trop lourd)
+        
+            Pour le nom des images, utiliser nom en miniscule, sans accent et sans espace (underscore à la place _ ) -->
+        
+        <!-- Insérer l'image -->
+            <!-- Balise orpheline <img>. attributs : src="" pour la source et alt="" pour decrire l'image pour les iades à la lecture et les moteurs de recherche 
+            L'image est utile à la compréhension et pour les WCAG (aides) donc elle passe en html. Les images "inutiles" sont elles introduite via le CSS (ex: bannière) 
+            
+            Si on vuet indiquer que l'image a de l'importance on l'intègre à une <figure></> et un <figcaption></> pour y mettre une description et tile pour l'infobulle-->
 
 
 
 <p> Lien vers l'autre page ! -> <a href="contact.html" target="_blank" title="N'hésitez pas !">Contact</a></p>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <span class="bold red background">Placeat, deserunt, nam quas nesciunt eius aspernatur ad nemo similique ex, minus quos voluptas?</span> Nulla distinctio maiores possimus corrupti, odit temporibus laudantium quae omnis blanditiis fugit architecto adipisci magnam deleniti consequuntur debitis nobis provident illum quia? Similique, ducimus? Aut, expedita illum nobis aliquam reiciendis qui corporis voluptates placeat possimus unde, molestias quae culpa blanditiis! Odio facilis dolores nesciunt iste dolorem non nam nobis modi exercitationem ullam amet voluptas nulla corrupti facere alias omnis, quibusdam dolore qui atque velit. Facilis, exercitationem libero. Voluptatibus dolores adipisci ipsum vitae quaerat facilis fugiat, perspiciatis a alias!</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <span class="bold red background">Placeat, deserunt, nam quas nesciunt eius aspernatur ad nemo similique ex, minus quos voluptas?</span> Nulla distinctio maiores possimus corrupti, odit temporibus laudantium quae omnis blanditiis fugit architecto adipisci magnam deleniti consequuntur debitis nobis provident illum quia? Similique, ducimus? Aut, expedita illum nobis aliquam reiciendis qui corporis voluptates placeat possimus unde, molestias quae culpa blanditiis! Odio facilis dolores nesciunt iste dolorem non nam nobis modi exercitationem ullam amet voluptas nulla corrupti facere alias omnis, quibusdam dolore qui atque velit. Facilis, exercitationem libero. Voluptatibus dolores adipisci ipsum vitae quaerat facilis fugiat, perspiciatis a alias!
+</p>
 <p>Pour une demande d'info, <a href="mailto:tristan.erard@gmail.com?subject=Demande d'info">contactez moi par mail !</a></p>
+<p>Pour consulter mon CV, suivez ce <a href="cv.html" target="_blank" title="CV de Tristan">lien</a>.</p>
+<p>Voici une image :
+    <img src="chien.jpg" alt="Chien" title="Chien en laisse">
+</p>
 </body>
 </html>

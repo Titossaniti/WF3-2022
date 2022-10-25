@@ -1,3 +1,10 @@
+/*
+Balise sémentiques : juste le nom de la balise. virgule espace pour les accumuler sur la ligne
+Classe : un point .   Et dans class=x x x pour en mettre plusieurs
+Id : Un # 
+*/
+
+
 .red {
     color: red;
 }
@@ -7,3 +14,61 @@
 .background {
     background-color: blue;
 }
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: rgba(155, 56, 56, 0.719);
+    font-weight: 900;
+}
+h2 {
+    color: rgb(206, 157, 112);
+    font-weight: 600;
+    border: solid;
+    border-radius: 8px;
+}
+#photo {
+    width: 220px;
+}
+
+/* On va appeler notre premier helper ! 
+exemple : créé une classe text-center et l'assigné en html à toutes les balises concernés
+Plutôt que de rajouter texte-center dans chaque classe*/
+
+
+/* Petit point sur les conventions de nommages : 
+        textCenter  : Camel case
+        text-center : Kebab case
+        text_center : Snake case
+        TEXT_CENTER : Upper case*/
+
+/* Les selecteurs */
+
+*{
+    
+/* selectionne tous les éléments de la page */
+
+}
+
+.container strong {
+
+/* Sélectionne uniquement les balises strong qui ont la classe container */
+
+}
+
+h1 + p {
+    /* Sélectionne uniquement le PREMIER p qu'il y a APRES le h1 */    
+}
+
+p[title] {
+
+/* Sélectionne une balise qui possède un attribut */
+/* Peut aussi être plsu précis avec p[title="nom"] */
+
+}
+
+/* Les valeurs pour les tailles 
+
+    On utilise les valeurs absolue uniquement si nécessaire 
+    
+    Valeurs relatives : %, em, rem, vw, et vh    */
+
+/* Pour la police, google fonts, copier le code html et recup le nom css */

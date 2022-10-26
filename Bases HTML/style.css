@@ -61,7 +61,7 @@ h1 + p {
 p[title] {
 
 /* Sélectionne une balise qui possède un attribut */
-/* Peut aussi être plsu précis avec p[title="nom"] */
+/* Peut aussi être plus   précis avec p[title="nom"] */
 
 }
 

@@ -4,6 +4,10 @@ Classe : un point .   Et dans class=x x x pour en mettre plusieurs
 Id : Un # 
 */
 
+body{
+    background-image: url(../IMG/backcv.webp);
+    background-repeat: no-repeat;
+}
 .red {
     color: #5f1111;
 }
@@ -23,9 +27,9 @@ h2 {
     color: #965c11;
     font-size: 1.5em;
     font-weight: 700;
-    border: solid 2px;
+    border: solid 3.5px;
     border-color: #965c11;
-    margin-right: 25%;
+    padding-left: 0.4em;
 }
 #photo {
     width: 200px;   
@@ -34,11 +38,12 @@ h2 {
 * {
     font-family: 'Oswald', sans-serif;
     margin-left: 1%;
-    margin-right: 25%;
+    margin-right: 10%;
 }
 
 ul{
     list-style-type: none;
+    padding-left: 1em;
 }
 
 /* On va appeler notre premier helper ! 
@@ -136,5 +141,25 @@ font-size: 0.9em;
     color: black;
 }
 
-/* Au clic 
+.linkcv{
+    color: #7c4a09;
+    text-decoration: none;
+
+}
+
+/*      Au clic 
         On utilise :active pour le clic*/
+
+/*      Au focus (shift+tab)
+        
+        Lien visité -> :visited*/
+
+/* Les marges */
+
+/* Les marges internes et externes -->
+        Padding, marge interieur
+        Margin, marge exterieur 
+Les éléments inline ont aussi des marges 
+    
+    Si ca dépasse du bloc, on peut utiliser overflow pour pouvoir scroll ou bien text-overflow: ellipsis pour rajouter les ... 
+    Il a besoin de white-space:nowrap en amont pour fonctionner */

@@ -4,29 +4,41 @@ Classe : un point .   Et dans class=x x x pour en mettre plusieurs
 Id : Un # 
 */
 
-
 .red {
-    color: red;
+    color: #5f1111;
 }
 .bold {
     font-weight: 600;
 }
 .background {
-    background-color: blue;
+    background-color: #0000ff69;
 }
 h1 {
     font-family: 'Oswald', sans-serif;
-    color: rgba(155, 56, 56, 0.719);
+    color: #9e5418b7;
     font-weight: 900;
 }
 h2 {
-    color: rgb(206, 157, 112);
-    font-weight: 600;
-    border: solid;
-    border-radius: 8px;
+    font-family: 'Oswald', sans-serif;
+    color: #965c11;
+    font-size: 1.5em;
+    font-weight: 700;
+    border: solid 2px;
+    border-color: #965c11;
+    margin-right: 25%;
 }
 #photo {
-    width: 220px;
+    width: 200px;   
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+    margin-left: 1%;
+    margin-right: 25%;
+}
+
+ul{
+    list-style-type: none;
 }
 
 /* On va appeler notre premier helper ! 
@@ -72,3 +84,57 @@ p[title] {
     Valeurs relatives : %, em, rem, vw, et vh    */
 
 /* Pour la police, google fonts, copier le code html et recup le nom css */
+
+/* Style d'écriture */
+
+/*  
+    Gras = bold                 (font-weight)
+    Italique = italic           (font-style)
+    under/over.line or line     (font decoration) 
+    
+    right left center           (texte-align)
+    border right top left...    (border(-left))
+    padding = marge             (padding)
+*/
+
+/* Image de fond */
+
+/*
+XXXXX
+*/
+
+/* Les bordures */
+
+/*
+border-radius pour les angles,  1 seule valeur = 4 meme arrondis
+                                4 valeurs = angles dans le sens montre
+*/
+.div_info {
+color: #7c4a09;
+box-shadow: 5px 5px 10px #5f3908bb;
+font-size: 0.9em;
+}
+
+/* 
+    box-shadow pour les ombres, text-shadow pour les textes
+    box-shadow-inset pour que l'ombre soit à l'intérieur du bloc
+*/
+
+.Liencontact a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Les apparences dynamiques */
+
+    /*  Le survol
+        On parle de pseudo format quand il y a -> : devant la "commande" (ex:  :hover est une pseudo classe)
+        Pour le survol on utilise survol */
+
+.Liencontact a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+/* Au clic 
+        On utilise :active pour le clic*/

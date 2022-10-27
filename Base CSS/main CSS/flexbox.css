@@ -1,0 +1,33 @@
+.flexrange {
+    display: flex;
+}
+
+.flexrange div {
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+}
+
+.flexrange div:first-of-type {
+    background: blue;
+}
+
+.flexrange div:nth-child(2){
+    background: black;
+}
+
+.flexrange div:last-of-type {
+    background: red;
+}
+
+.colonne {
+    flex-direction: column-reverse;
+}
+
+.retourligne{
+    flex-wrap: wrap;
+}
+
+.spacearound{
+    justify-content: space-around;
+}

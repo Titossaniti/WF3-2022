@@ -5,8 +5,10 @@ Id : Un #
 */
 
 body{
-    background-image: url(../IMG/backcv.webp);
+    background-image: url(../IMG/ X backcv.webp);
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .red {
     color: #5f1111;
@@ -27,23 +29,35 @@ h2 {
     color: #965c11;
     font-size: 1.5em;
     font-weight: 700;
-    border: solid 3.5px;
-    border-color: #965c11;
+    border: solid 3.5px #965c11; 
     padding-left: 0.4em;
 }
 #photo {
-    width: 200px;   
+    width: 300px;   
 }
 
 * {
     font-family: 'Oswald', sans-serif;
-    margin-left: 1%;
-    margin-right: 10%;
 }
 
 ul{
     list-style-type: none;
     padding-left: 1em;
+}
+
+.sectionalign{
+    width: 100px;
+    border:solid 0.5px #7c4a09;
+    margin-bottom: 0.7em;
+}
+
+.tete{
+    display: flex;
+}
+
+.blocalign{
+    display: flex;
+    flex-flow: row wrap;
 }
 
 /* On va appeler notre premier helper ! 
@@ -163,3 +177,4 @@ Les éléments inline ont aussi des marges
     
     Si ca dépasse du bloc, on peut utiliser overflow pour pouvoir scroll ou bien text-overflow: ellipsis pour rajouter les ... 
     Il a besoin de white-space:nowrap en amont pour fonctionner */
+

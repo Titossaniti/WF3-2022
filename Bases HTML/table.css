@@ -1,0 +1,18 @@
+/* Une propriété permet de coller les bordures entre elles
+    
+    -> border-collapse avec valeur separate ou collapse*/
+
+table{
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid blue;
+    padding: 0.5em;
+}
+
+/* Caption-side permet de positionner le titre (top par défaut)*/
+
+caption{
+    caption-side: bottom;
+}

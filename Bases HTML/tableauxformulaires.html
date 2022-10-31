@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="table.css">
+    <title>Tableaux et Formulaires</title>
+</head>
+<body>
+    <!--Tableau simple-->
+        
+    <!--balise <table></table> de type bloc 
+
+            + balise :  <tr></tr> -> Début et fin d'une ligne
+                        <td></td> -> Début et du contenue d'une cellule
+                        <th></th> -> Cellule de catégories
+                        <caption> -> Titre du tableau
+                        <thead>   -> En tête du tableau
+                        <tfoot>   -> Pied du tableau
+                        <tbody>   -> Le corp du tableau
+
+            Donc dans un tableau ligne par ligne  il y a les td dans les tr -->
+
+<h2>LES TABLEAUX</h2>
+    <p>1er tableau</p>
+
+<table>
+    <caption>Liste des apprenants</caption>
+    <tr> 
+        <th>Prénom</th>
+        <th>Age</th>        
+        <th>Hobby</th>
+    </tr>
+    <tr>
+        <td>Mouloud</td>
+        <td>50ans</td>
+        <td>Astronomie</td>
+    </tr>
+    <tr>
+        <td>Lamïa</td>
+        <td>28ans</td>
+        <td>Sport</td>
+    </tr>
+</table>
+
+    <p>2ème tableau</p>
+
+<table>
+    <caption>Liste des apprenants</caption>
+    <thead><tr> 
+        <th>Prénom</th>
+        <th>Age</th>        
+        <th>Hobby</th>
+    </tr></thead>
+    <tbody><tr>
+        <td>Mouloud</td>
+        <td>50ans</td>
+        <td>Astronomie</td>
+    </tr>
+    <tr>
+        <td>Lamïa</td>
+        <td>28ans</td>
+        <td>Sport</td>
+    </tr>
+    <tr>
+        <td>Maxime</td>
+        <td>27ans</td>
+        <td>L'espace</td>
+    </tr>
+    <tr>
+        <td>Meijuan</td>
+        <td>32ans</td>
+        <td>Tricot</td>
+    </tr></tbody>
+</table>
+
+<!-- Colspan et rowspan servent à fusionner les cellules d'une même rangée ou colonne -->
+
+<p>3ème tableau - fusion horizontale</p>
+
+<table>
+    <caption>Films</caption>
+    <thead><tr> 
+        <th>Titre</th>
+        <th>Pour enfant</th>        
+        <th>Pour ados</th>
+    </tr></thead>
+    <tbody><tr>
+        <td>Alien</td>
+        <td>trop violent</td>
+        <td>oui</td>
+    </tr>
+    <tr>
+        <td>oui-oui</td>
+        <td>oui</td>
+        <td>non du tout</td>
+    </tr>
+    <tr>
+        <td>Cars</td>
+        <td colspan="2">pour tout le monde</td> <!-- colspan + "nb à fusionner" pour al fusion des cellules-->
+    </tr>
+    </tbody>
+</table>
+
+<p>4ème, fusion verticale</p>
+<table>
+    <caption>Films</caption>
+    <tr> 
+        <th>Titre du film</th>
+        <td>Alien</td>        
+        <td>Oui Oui</td>
+        <td>Cars</td>
+    </tr>
+    <tr>
+        <th>Pour enfant ?</th>
+        <td>non</td>
+        <td>oui</td>
+        <td rowspan="2">pour toute la famille</td>
+    </tr>
+    <tr>
+        <th>pour ados ?</th>
+        <td>oui</td>
+        <td>non du tout</td>
+    </tr>
+</table>
+
+<h2>LES FORMULAIRES</h2> <!--Pour saisir du texte, une option, et valider. Cpdt, le traitement des données se fait via un autre langage comme php, node.js, asp.net etc... -->
+
+<p>1er formulaire</p>
+
+<!--    <form> (coprs)
+            attribut method pour choisir le moyen d'envoyer les données, avec la valeur "post" (ou "get" mais c'est limité)
+            attribut action, pour l'adresse de la page qui va traiter les infos. (souvent du php)
+
+        <input> ORPHELINE (zone de texte basiques )
+            2types :    monoligne et multilignes.
+
+            l'attribut avec input est type mais la valeur peut varier et un name (varibale à envoyer en back)
+        
+        <label> (pour aguiller l'user) (peut aussi use l'attribut placeholder dans l'input)
+            pour lier label avec l'input il faut donner un id à notre input et le meme attribut for à label.
+-->
+
+
+<form method="post" action="feuille.php">
+    <label for="prenom">Prénom :</label>
+    <input type="text" name="prenom" id="prenom" placeholder="Name" size="20" maxlength="30">
+<br><br>
+    <label for="mdp">Mot de passe :</label>
+    <input type="password" name="mdp" id="mdp" placeholder="Password">
+    <!--Multiligne :-->
+<br><br>
+    <label for="message">Votre message :</label>
+    <textarea name="message" id="msg">Ecris ici !</textarea>
+</form>
+
+<!-- Les zones de saisie enrichies.  Attribut required pour rendre le champ obligatoire
+-->
+<p>Les zones de saisie enrichies</p>
+
+<form>
+    <label for="mail">Mail :</label>
+    <input type="email" name="email" id="email">
+
+    <label for="tel">Téléphone :</label>
+    <input type="tel" name="tel" id="tel" required>
+<br><br>
+    <label for="url">URL :</label>
+    <input type="url" name="url" id="url" required>
+
+<!-- On peut personnaliser avec des attribut 
+        min : valeur min
+        max: valeur max
+        step : ex: de 2 en 2 -->
+
+    <label for="number">Nombre :</label>
+    <input type="number" name="number" id="number" min="0" max="26" step="2">
+<br><br>
+<!-- Un curseur qui prend min, max, step avec affichage de la valeur à coté
+            pour afficher la valeur : oninput="this.nextElementSibling.value = this.value"> <output> </output>  -->
+
+    <label for="range">Taille en cm :</label>
+    <input type="range" name="range" id="range" min="0" max="100" step="1" oninput="this.nextElementSibling.value = this.value"> <output>50</output>
+<br><br>
+    <label for="color">Couleur :</label>
+    <input type="color" name="color" id="color">
+<br><br>
+    <label for="date">Date :</label>
+    <input type="date" name="date" id="date">
+<br><br>
+    <label for="search">Rechercher...</label>
+    <input type="search" name="search" id="search">
+<br><br>
+
+<p>Les éléments d'option</p>
+<!-- Les éléments d'option (case, zone option, liste déroulante)  +  attribut checked pour précocher dans l'input-->
+
+    <p>Cochez :</p>
+    <label for="interstellar">Interstellar</label>
+    <input type="checkbox" name="interstellar" id="interstellar">
+<br>
+    <label for="prometheus">Prometheus</label>
+    <input type="checkbox" name="prometheus" id="prometheus">
+<br>
+    <label for="bondieu">Qu'est-ce qu'on a fait au Bon Dieu ?</label>
+    <input type="checkbox" name="bondieu" id="bondieu" checked>
+<br>
+    <label for="avengers">Avengers</label>
+    <input type="checkbox" name="avengers" id="avengers">
+<br>
+
+<!-- Les zone d'option -->
+<p>Veuillez donner votre genre :</p> <!-- 1 seul choix possible grace à type=RADIO-->
+<label for>Masculin</label>
+<input type="radio" name="gender" id="male" value="male">
+
+<label for>Féminin</label>
+<input type="radio" name="gender" id="female" value="female">
+</form>
+
+<!-- Les listes déroulante 
+        Attribut selected pour defnir la valeur par défaut
+        <optgroup> avec attribut label= pour définir des catégorie dans la sélection-->
+
+<form method="post" action="feuille.php">
+    <label for="country">Votre Pays</label>
+    <select name="country" id="country">
+        <optgroup label="Francophones">
+            <option value="fr">France</option>
+            <option value="mr">Maroc</option>
+        </optgroup>
+        <optgroup label="Autre">
+            <option value="br">Brésil</option>
+            <option value="au" selected>Australie</option>
+        </optgroup>
+    </select>
+</form>
+<br><br><br>
+<!-- FINALISER ET ENVOYER LE FORMULAIRE
+(à compléter)-->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Formulaire</title>
+</head>
+
+<body>
+    <header>
+        <h1>CONTACT</h1>
+    </header>
+
+    <div class="bodies">
+        <form action="https://api.staticforms.xyz/submit" method="post" class="body">
+
+
+            <fieldset class="info">
+                <legend>Vos informations</legend>
+
+                <p>Genre</p>
+                <label for="male">Masculin</label>
+                <input type="radio" name="$gender" id="male" value="male" >
+                <label for ="female">Féminin</label>
+                <input type="radio" name="$gender" id="female" value="female" >
+
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Nom">
+
+
+                <label for="forname"></label>
+                <input type="text" name="$forname" id="forname" placeholder="Prénom">
+
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Adresse mail" >
+                <label for="tel"></label>
+                <input type="tel" name="$tel" id="tel" placeholder="Téléphone" >
+
+                <label for="societe"></label>
+                <input type="text" name="$societe" id="societe" placeholder="Nom de la société">
+                <label for="lieu"></label>
+                <input type="text" name="$lieu" id="lieu" placeholder="Lieu">
+            </fieldset>
+
+            <fieldset class="biais">
+                <legend>Via quel biais avez vous trouvé mon CV ?</legend>
+
+                <label for="linkedin">Linkedin</label>
+                <input type="checkbox" name="$linkedin" id="linkedin">
+                <label for="contactperso">Contact personnel</label>
+                <input type="checkbox" name="$contactperso" id="contactperso">
+                <label for="autre">Autre</label>
+                <input type="checkbox" name="$autre" id="autre">
+            </fieldset>
+
+            <fieldset class="writeme">
+                <legend>Ecrivez moi !</legend>
+                <label for="msg"></label>
+                <textarea name="$msg" id="msg" placeholder="Votre message" ></textarea>
+            </fieldset>
+
+            <fieldset class="datebloc">
+                <label for="date">Si vous désirez me recevoir en entretien, indiquez la date qui vous conviendrai le
+                    mieux.</label>
+                <br><input type="date" name="$date" id="date">
+            </fieldset>
+
+            <input type="text" name="honeypot" style="display:none">
+            <input type="hidden" name="accessKey" value="e87accda-8a80-46b8-a878-f55f8ef4ff87">
+            <input type="hidden" name="subject" value="Contact us from - example.com">
+            <input type="hidden" name="replyTo" value="@">
+            <input type="submit" value="Envoyer" class="submit">
+
+        </form>
+    </div>
+</body>
+
+</html>

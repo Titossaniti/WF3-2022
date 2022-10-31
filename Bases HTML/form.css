@@ -1,0 +1,77 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #00000077;
+}
+
+h1{
+    text-align: center;
+}
+
+legend{
+    background-color: rgba(0, 0, 0, 0.247);;
+    border-top: solid 1px black;
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+    font-weight: 700;
+}
+
+.bodies{
+    padding: 4em;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset{
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+.info{
+    display: flex;
+    flex-flow: row wrap;
+    height: 10em;
+}
+
+.biais{
+    height: 5em;
+    margin-top: 1.5em;
+    
+}
+
+.writeme{
+    height: 7.5em;
+    margin-top: 1.5em;
+}
+
+
+
+.datebloc{
+    width: 350px;
+    align-self: center;
+    text-align: center;
+    border: solid 1px rgba(29, 28, 28, 0.582);
+    margin: 1em;
+    padding-top: 1.1em;
+}
+
+#date{
+    margin-top: 1.2em;
+}
+
+.submit{
+    font-weight: 900;
+    border-radius: 15px;
+    margin-top: 3.5em;
+    align-self: center;
+}
+
+#msg{
+    width: 100%;
+    height: 7em;
+}
+

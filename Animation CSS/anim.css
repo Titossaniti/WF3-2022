@@ -1,0 +1,178 @@
+/* En même temps que je stylise mon doc, j'introduis la notion de variable en CSS */
+
+/* On place deux tirets avant le nom de la variable, on place la valeur souhaitée*/
+
+html{
+    --main-color: #887CAF;
+    --sec-color: #13073A;   
+}
+
+footer{
+    margin-top: 20em;
+}
+
+.btn{
+    margin: auto;
+    background-color: var(--main-color);
+    color:var(--sec-color);
+    font-size: 2em;
+    padding: 0.5em;  
+    width: 10em;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 3px 15px black;
+    cursor:pointer;
+}
+
+/* Pour appeler la varibale on utilise : var(--ma-variable)*/
+.container1 .btn{
+    margin: auto;
+    background-color: var(--main-color);
+    color:var(--sec-color);
+    font-size: 2em;
+    padding: 0.5em;  
+    width: 10em;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 3px 15px black;
+    cursor:pointer;
+
+    transform: scale(1);
+    /*transition: transform 1.3s = */
+    transition-property: transform;
+    transition-duration: 1.5s;
+}
+
+/* Je souhaite qu'il scale au survol de la souris*/
+
+.container1 .btn:hover{
+    transform: scale(1.25);
+}
+
+/* Je change le texte au survol:*/
+
+.mon-text:hover span{  
+    display: none;
+}
+
+.mon-text:hover:after{
+    content:"Mon texte qui a changé";
+}
+
+/*Validation au focus*/
+
+.container2 form{
+    width: 10em;
+    margin: auto;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #cecece;
+    min-height: 5em;
+    border-radius: 10px;
+}
+
+.container2 form input{
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 0.5em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    /*Pour supprimer la bordure du focus*/
+    outline: none;
+
+}
+
+.container2 form input:focus{
+    border: 2px solid var(--main-color);
+}
+
+/*Pour indiquer que le champs remplit n'est pas valide*/
+.container2 form input:invalid{
+    border: 2px solid var(--sec-color);
+}
+
+/*Cette technique peut induire l'utilisateur en erreur
+On combine donc avec not()*/
+
+.container2 form input:not( :focus):invalid{
+    border: solid 2px var(--sec-color);
+}
+
+/* Déclenchement évènement pseudo classe
+        Les pseudo-classes les plus utilisées pour les déclanchement
+            - :hover
+            - :active
+            - :focus
+            - :checked
+            - :focus
+            - :valid
+            - :invalid
+            - :not()
+            - :enable
+            - :disable ...
+            */
+
+.container3 .circle{
+    width: 3em;
+    height: 3em;
+    margin: 1em auto;
+    background: var(--sec-color);
+    border-radius: 50%;
+    border:#887CAF solid;
+
+    transform: scale(0.5);
+    transition: transform 500ms;
+}
+
+.container3 .btn:active + .circle{
+    transform: scale(1.5);
+}
+
+.container3{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.container5{
+    margin-top: 3em;
+}
+
+/* Transition + propriétés multiples*/
+
+.container4 .btn{
+    transform: scale(1);
+    transition: all 200ms;
+}
+
+.container4 .btn:hover{
+    transform: scale(1.5);
+    background-color: var(--sec-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.container5 .btn:hover{
+    transform: scale(1.5);
+    background-color: var(--sec-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.container5 .btn{
+    transition: transform 1s, background-color:500ms;
+
+    transition-delay:0, 500ms;
+}
+
+.fa-truck{
+    font-size: 1.2em;
+}
+
+
+

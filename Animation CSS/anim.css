@@ -165,8 +165,7 @@ On combine donc avec not()*/
 }
 
 .container5 .btn{
-    transition: transform 1s, background-color:500ms;
-
+    transition: transform 1s, background-color: 500ms; 
     transition-delay:0, 500ms;
 }
 
